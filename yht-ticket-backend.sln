@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common\YhtTicket.Common.Infrastructure", "common\YhtTicket.Common.Infrastructure\YhtTicket.Common.Infrastructure.csproj", "{8EFBC0B4-7D27-429B-8E9F-C0ED86EA8D95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YhtTicket.Common.Infrastructure", "common\YhtTicket.Common.Infrastructure\YhtTicket.Common.Infrastructure.csproj", "{8EFBC0B4-7D27-429B-8E9F-C0ED86EA8D95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YhtTicket.CatalogApi", "YhtTicket.CatalogApi\YhtTicket.CatalogApi.csproj", "{4A811E3F-289A-4DFC-825D-0D71FD11F186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YhtTicket.Common.EybisClient", "common\YhtTicket.Common.EybisClient\YhtTicket.Common.EybisClient.csproj", "{CECC30B1-1341-40C9-9771-C937CB73B89E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8EFBC0B4-7D27-429B-8E9F-C0ED86EA8D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EFBC0B4-7D27-429B-8E9F-C0ED86EA8D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EFBC0B4-7D27-429B-8E9F-C0ED86EA8D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A811E3F-289A-4DFC-825D-0D71FD11F186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A811E3F-289A-4DFC-825D-0D71FD11F186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A811E3F-289A-4DFC-825D-0D71FD11F186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A811E3F-289A-4DFC-825D-0D71FD11F186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CECC30B1-1341-40C9-9771-C937CB73B89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECC30B1-1341-40C9-9771-C937CB73B89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECC30B1-1341-40C9-9771-C937CB73B89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECC30B1-1341-40C9-9771-C937CB73B89E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
