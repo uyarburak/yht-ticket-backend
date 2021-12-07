@@ -10,6 +10,7 @@ using System.Net.Http.Headers;
 using YhtTicket.Common.EybisClient;
 using YhtTicket.Common.Infrastructure.Exceptions;
 using YhtTicket.Common.Infrastructure.Extensions;
+using YhtTicket.Common.Redis.Extensions;
 
 namespace YhtTicket.CatalogApi
 {
@@ -48,6 +49,8 @@ namespace YhtTicket.CatalogApi
                 config.AssumeDefaultVersionWhenUnspecified = true;
                 config.ReportApiVersions = true;
             });
+
+            services.AddRedis(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

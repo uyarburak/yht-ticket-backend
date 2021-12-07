@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\common\YhtTicket.Common.EybisClient\YhtTicket.Common.EybisClient.csproj" />
     <ProjectReference Include="..\common\YhtTicket.Common.Infrastructure\YhtTicket.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\common\YhtTicket.Common.Redis\YhtTicket.Common.Redis.csproj" />
   </ItemGroup>
 
 </Project>
