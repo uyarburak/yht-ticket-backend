@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using YhtTicket.Common.EybisClient.Models;
+using YhtTicket.Common.Infrastructure.Exceptions;
 
 namespace YhtTicket.Common.EybisClient
 {
@@ -16,13 +18,34 @@ namespace YhtTicket.Common.EybisClient
             _httpClientFactory = httpClientFactory;
         }
 
+        public async Task<List<YhtScheduleInfo>> GetSchedulesAsync(string departure, string destination, DateTime departureDate, CancellationToken cancellationToken = default)
+        {
+            var response = await PostAsync<YhtSeferSorgulaRequest, YhtResponseSeferSorgula>("seferSorgula", new YhtSeferSorgulaRequest
+            {
+                SeferSorgulamaKriterWSDVO = new SeferSorgulamaKriterWSDVO(departure, destination, departureDate)
+            }, cancellationToken);
+
+            if (!response.HasError)
+            {
+                return response.SeferSorgulamaSonucList;
+            }
+
+            if (response.CevapBilgileri.CevapKodu == "998")
+            {
+                return new List<YhtScheduleInfo>();
+            }
+
+            throw new ApiException(System.Net.HttpStatusCode.BadRequest, $"TCDD_{response.CevapBilgileri.CevapKodu}", response.CevapBilgileri.CevapMsj);
+        }
+
         public async Task<List<YhtStationInfo>> GetStationsAsync(CancellationToken cancellationToken = default)
         {
             var response = await PostAsync<YhtRequest, YhtResponseSatisVeriYukle>("satisVeriYukle", new YhtRequest(), cancellationToken);
             return response.IstasyonBilgileriList;
         }
 
-        private async Task<TResponse> PostAsync<TRequest, TResponse>(string url, TRequest request, CancellationToken cancellationToken = default)
+
+        private async Task<TResponse> PostAsync<TRequest, TResponse>(string url, TRequest request, CancellationToken cancellationToken = default) where TResponse : YhtBaseResponse
         {
             var options = new JsonSerializerOptions
             {

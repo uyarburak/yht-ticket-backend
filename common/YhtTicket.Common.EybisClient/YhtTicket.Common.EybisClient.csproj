@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\YhtTicket.Common.Infrastructure\YhtTicket.Common.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
