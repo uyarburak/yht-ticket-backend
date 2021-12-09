@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YhtTicket.CatalogApi", "Yht
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YhtTicket.Common.EybisClient", "common\YhtTicket.Common.EybisClient\YhtTicket.Common.EybisClient.csproj", "{CECC30B1-1341-40C9-9771-C937CB73B89E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YhtTicket.Common.Redis", "common\YhtTicket.Common.Redis\YhtTicket.Common.Redis.csproj", "{094B8047-8E87-4B7E-8549-4C4DA2CC8F1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YhtTicket.Common.Redis", "common\YhtTicket.Common.Redis\YhtTicket.Common.Redis.csproj", "{094B8047-8E87-4B7E-8549-4C4DA2CC8F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YhtTicket.AlertApi", "YhtTicket.AlertApi\YhtTicket.AlertApi.csproj", "{92094FA4-18AE-4FA0-9CF8-4781FC441CA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YhtTicket.Common.MassTransit", "common\YhtTicket.Common.MassTransit\YhtTicket.Common.MassTransit.csproj", "{0DAAFE22-62B1-4088-B18D-410B1F82BF14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YhtTicket.Common.Models", "common\YhtTicket.Common.Models\YhtTicket.Common.Models.csproj", "{8ECFD8A1-34C7-47FB-87FA-E5A5883F23A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{094B8047-8E87-4B7E-8549-4C4DA2CC8F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{094B8047-8E87-4B7E-8549-4C4DA2CC8F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{094B8047-8E87-4B7E-8549-4C4DA2CC8F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92094FA4-18AE-4FA0-9CF8-4781FC441CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92094FA4-18AE-4FA0-9CF8-4781FC441CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92094FA4-18AE-4FA0-9CF8-4781FC441CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92094FA4-18AE-4FA0-9CF8-4781FC441CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DAAFE22-62B1-4088-B18D-410B1F82BF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAAFE22-62B1-4088-B18D-410B1F82BF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAAFE22-62B1-4088-B18D-410B1F82BF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAAFE22-62B1-4088-B18D-410B1F82BF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECFD8A1-34C7-47FB-87FA-E5A5883F23A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECFD8A1-34C7-47FB-87FA-E5A5883F23A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECFD8A1-34C7-47FB-87FA-E5A5883F23A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECFD8A1-34C7-47FB-87FA-E5A5883F23A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
